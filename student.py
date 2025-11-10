@@ -24,7 +24,7 @@ def add_student(first_name, last_name, email, enrollment_date):
 def delete_student(student_id):
     conn = connect()
     cur = conn.cursor()
-    cur.execute("DELETE FROM students WHERE id = %s", (student_id,))
+    cur.execute("DELETE FROM students WHERE student_id = %s", (student_id,))
     conn.commit()
     conn.close()
 
@@ -33,7 +33,7 @@ def update_student(student_id, first_name, last_name, email, enrollment_date):
     conn = connect()
     cur = conn.cursor()
     cur.execute(
-        "UPDATE students SET first_name = %s, last_name = %s, email = %s, enrollment_date = %s WHERE id = %s",
+        "UPDATE students SET first_name = %s, last_name = %s, email = %s, enrollment_date = %s WHERE student_id = %s",
         (first_name, last_name, email, enrollment_date, student_id)
     )
     conn.commit()
@@ -49,3 +49,4 @@ def update_student_email(student_id, new_email):
     )
     conn.commit()
     conn.close()
+
