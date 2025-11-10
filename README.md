@@ -52,7 +52,7 @@ Deletes a student by their ID.
 Updates an existing student's information.
 
 # Video Demonstration
-Watch the full video here:
+Watch the full video here: https://youtu.be/q0mrJxVyvfU
 
 # Functions Implemented
 - `get_all_students()`
@@ -66,3 +66,4 @@ Watch the full video here:
 3. Insert initial data
 4. Run `python app.py` to launch the web app
 5. Run `python test.py` to test backend functions
+
